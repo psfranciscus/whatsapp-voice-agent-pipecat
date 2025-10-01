@@ -1,0 +1,13 @@
+[project]
+name = "pipecat-sample-voice-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "loguru>=0.7.3",
+    "pipecat-ai[webrtc,daily,silero,deepgram,openai,cartesia,local-smart-turn-v3,runner]>=0.0.85",
+    "python-dotenv>=1.1.1",
+    "pipecatcloud>=0.2.4",
+]
