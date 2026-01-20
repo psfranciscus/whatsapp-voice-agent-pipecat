@@ -1,5 +1,5 @@
 agent_name = "kapso-voice"  # 👈 Your Pipecat Cloud agent name
-image = "YOUR_DOCKERHUB_USERNAME/agent-name:VERSION"  # 👈 Update with your registry and tag
+image = "franciscus26/calma-voice-agent:v1"  # 👈 Update with your registry and tag
 secret_set = "kapso-voice-secrets"  # 👈 Name of your Pipecat Cloud secret set
 
 [scaling]
