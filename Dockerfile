@@ -1,4 +1,4 @@
-FROM dailyco/pipecat-base:latest
+FROM --platform=linux/amd64 dailyco/pipecat-base:latest
 
 # Enable bytecode compilation
 ENV UV_COMPILE_BYTECODE=1
