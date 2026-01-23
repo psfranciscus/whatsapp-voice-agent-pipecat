@@ -344,6 +344,7 @@ async def run_voice_pipeline(
             api_key=openai_api_key,
             session_properties=session_properties,
             start_audio_paused=False,
+            temperature=0.8,
         )
 
         # Provide an initial user message so the assistant greets the caller
