@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 # Configuration constants
 IDLE_TIMEOUT_SECS = int(os.getenv("IDLE_TIMEOUT_SECS", "30"))
-AUDIO_OUT_10MS_CHUNKS = int(os.getenv("AUDIO_OUT_10MS_CHUNKS", "2"))
+AUDIO_OUT_10MS_CHUNKS = int(os.getenv("AUDIO_OUT_10MS_CHUNKS", "1"))
 NOISE_REDUCTION_TYPE = os.getenv("NOISE_REDUCTION_TYPE", "near_field")
 
 from pipecat.audio.vad.silero import SileroVADAnalyzer
