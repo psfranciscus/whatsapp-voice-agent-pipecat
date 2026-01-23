@@ -331,7 +331,7 @@ async def run_voice_pipeline(
             instructions=instructions,
             voice="coral",
             input_audio_transcription=InputAudioTranscription(),
-            turn_detection=SemanticTurnDetection(eagerness=0.8),
+            turn_detection=SemanticTurnDetection(eagerness="high"),
             input_audio_noise_reduction=InputAudioNoiseReduction(type=NOISE_REDUCTION_TYPE),
         )
 
