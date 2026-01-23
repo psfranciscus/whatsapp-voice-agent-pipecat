@@ -329,6 +329,7 @@ async def run_voice_pipeline(
 
         session_properties = SessionProperties(
             instructions=instructions,
+            voice="nova", 
             input_audio_transcription=InputAudioTranscription(),
             turn_detection=SemanticTurnDetection(),
             input_audio_noise_reduction=InputAudioNoiseReduction(type=NOISE_REDUCTION_TYPE),
