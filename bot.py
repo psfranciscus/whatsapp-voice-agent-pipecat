@@ -348,7 +348,7 @@ async def run_voice_pipeline(
         )
 
         # Provide an initial user message so the assistant greets the caller
-        llm_context = OpenAILLMContext([{"role": "user", "content": "Aló"}])
+        llm_context = OpenAILLMContext([{"role": "user", "content": "Hola, estoy llamando"}])
         context_aggregator = llm.create_context_aggregator(llm_context)
 
         pipeline = Pipeline(
