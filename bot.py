@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration constants
-IDLE_TIMEOUT_SECS = int(os.getenv("IDLE_TIMEOUT_SECS", "30"))
+IDLE_TIMEOUT_SECS = int(os.getenv("IDLE_TIMEOUT_SECS", "20"))  # Reducido para ahorrar costos
 AUDIO_OUT_10MS_CHUNKS = int(os.getenv("AUDIO_OUT_10MS_CHUNKS", "1"))
 NOISE_REDUCTION_TYPE = os.getenv("NOISE_REDUCTION_TYPE", "near_field")
 
@@ -331,7 +331,7 @@ async def run_voice_pipeline(
             instructions=instructions,
             voice="shimmer",
             input_audio_transcription=InputAudioTranscription(),
-            turn_detection=SemanticTurnDetection(eagerness="high"),
+            turn_detection=SemanticTurnDetection(eagerness="medium"),  # Reducido para ahorrar costos
             input_audio_noise_reduction=InputAudioNoiseReduction(type=NOISE_REDUCTION_TYPE),
         )
 
@@ -344,7 +344,7 @@ async def run_voice_pipeline(
             api_key=openai_api_key,
             session_properties=session_properties,
             start_audio_paused=False,
-            temperature=1.0,
+            temperature=0.8,  # Reducido para ahorrar costos (sigue siendo natural)
         )
 
         # Provide an initial user message so the assistant greets the caller

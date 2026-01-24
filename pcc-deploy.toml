@@ -3,4 +3,4 @@ image = "franciscus26/calma-voice-agent:v1"  # 👈 Update with your registry an
 secret_set = "kapso-voice-secrets"  # 👈 Name of your Pipecat Cloud secret set
 
 [scaling]
-	min_agents = 1
+	min_agents = 0  # On-demand: solo se activa cuando hay llamadas (reduce costos)
