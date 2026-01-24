@@ -342,6 +342,7 @@ async def run_voice_pipeline(
 
         llm = OpenAIRealtimeBetaLLMService(
             api_key=openai_api_key,
+            model="gpt-4o-mini-realtime-preview",  # Modelo más barato que GPT-4o Realtime
             session_properties=session_properties,
             start_audio_paused=False,
             temperature=0.8,  # Reducido para ahorrar costos (sigue siendo natural)
