@@ -379,6 +379,14 @@ async def run_voice_pipeline(
             logger.info("Client disconnected from voice pipeline")
             await task.cancel()
 
+        # Queue greeting immediately after task starts (don't wait for client connection)
+        # This ensures the agent speaks even if on_client_connected doesn't fire
+        async def start_pipeline():
+            await asyncio.sleep(0.1)  # Brief delay to ensure pipeline is ready
+            await task.queue_frames([LLMRunFrame()])
+        
+        # Start greeting in background
+        asyncio.create_task(start_pipeline())
         await runner.run(task)
         logger.info("Voice pipeline completed successfully")
 
